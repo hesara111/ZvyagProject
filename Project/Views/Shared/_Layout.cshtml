@@ -1,10 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@using Project.Helpers
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title – приложение ASP.NET</title>
+    <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -21,9 +22,13 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Домашняя страница", "Index", "Home")</li>
-                    <li>@Html.ActionLink("О программе", "About", "Home")</li>
-                    <li>@Html.ActionLink("Контакт", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Admin", "Index", "Admin/AdminHome")</li>
+                    <li>@Html.ActionLink("User", "Index", "User/UserHome")</li>
+                    <li>@Html.ActionLink("Public", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Register", "Index", "Register")</li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li>@Html.LoginLink("Sign in", "Dear friend {0}, sign out", "SignIn", "SignOut", "Login")</li>
                 </ul>
             </div>
         </div>
@@ -32,7 +37,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year – приложение ASP.NET</p>
+            <p>&copy; @DateTime.Now.Year - мое приложение ASP.NET</p>
         </footer>
     </div>
 

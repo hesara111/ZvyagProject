@@ -1,0 +1,11 @@
+C:\Users\diman\source\repos\Project\Project.BuisnessLogic\bin\Debug\Project.BuisnessLogic.dll
+C:\Users\diman\source\repos\Project\Project.BuisnessLogic\bin\Debug\Project.BuisnessLogic.pdb
+C:\Users\diman\source\repos\Project\Project.BuisnessLogic\bin\Debug\Project.Core.dll
+C:\Users\diman\source\repos\Project\Project.BuisnessLogic\bin\Debug\Newtonsoft.Json.dll
+C:\Users\diman\source\repos\Project\Project.BuisnessLogic\bin\Debug\Project.Core.pdb
+C:\Users\diman\source\repos\Project\Project.BuisnessLogic\bin\Debug\Newtonsoft.Json.xml
+C:\Users\diman\source\repos\Project\Project.BuisnessLogic\obj\Debug\Project.BuisnessLogic.csprojAssemblyReference.cache
+C:\Users\diman\source\repos\Project\Project.BuisnessLogic\obj\Debug\Project.BuisnessLogic.csproj.CoreCompileInputs.cache
+C:\Users\diman\source\repos\Project\Project.BuisnessLogic\obj\Debug\Project.BuisnessLogic.csproj.CopyComplete
+C:\Users\diman\source\repos\Project\Project.BuisnessLogic\obj\Debug\Project.BuisnessLogic.dll
+C:\Users\diman\source\repos\Project\Project.BuisnessLogic\obj\Debug\Project.BuisnessLogic.pdb

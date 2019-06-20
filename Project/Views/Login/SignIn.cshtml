@@ -1,0 +1,25 @@
+﻿@model Project.Core.Stuff.LoginVm
+
+@{ 
+    ViewBag.Title = "SignIn";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(s=>s.ReturnUrl)
+    <h1>Login to site</h1>
+    <div>
+        <p>
+            @Html.TextBoxFor(x => x.Login)
+            @Html.ValidationMessageFor(x => x.Login)
+        </p>
+        <p>
+            @Html.PasswordFor(x => x.Password)
+            @Html.ValidationMessageFor(x => x.Password)
+        </p>
+        <p>
+            @Html.ValidationMessage("SigninError")
+        </p>
+        <button type="submit">Login</button>
+    </div>
+}

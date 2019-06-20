@@ -1,0 +1,9 @@
+C:\Users\diman\source\repos\Project\Project.Core\bin\Debug\Project.Core.dll
+C:\Users\diman\source\repos\Project\Project.Core\bin\Debug\Project.Core.pdb
+C:\Users\diman\source\repos\Project\Project.Core\bin\Debug\Newtonsoft.Json.dll
+C:\Users\diman\source\repos\Project\Project.Core\bin\Debug\Newtonsoft.Json.xml
+C:\Users\diman\source\repos\Project\Project.Core\obj\Debug\Project.Core.csprojAssemblyReference.cache
+C:\Users\diman\source\repos\Project\Project.Core\obj\Debug\Project.Core.csproj.CoreCompileInputs.cache
+C:\Users\diman\source\repos\Project\Project.Core\obj\Debug\Project.Core.csproj.CopyComplete
+C:\Users\diman\source\repos\Project\Project.Core\obj\Debug\Project.Core.dll
+C:\Users\diman\source\repos\Project\Project.Core\obj\Debug\Project.Core.pdb
