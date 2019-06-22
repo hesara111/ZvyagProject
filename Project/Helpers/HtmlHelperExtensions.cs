@@ -25,7 +25,7 @@ namespace Project.Helpers
             }
             else
             {
-                linkText = string.Format(signoutLinkText, HttpContext.Current.Session["UserID"]);
+                linkText = string.Format(signoutLinkText, HttpContext.Current.Session["UserName"]);
                 action = signoutAction;
             }
 

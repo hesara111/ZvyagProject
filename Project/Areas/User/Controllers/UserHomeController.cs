@@ -1,4 +1,5 @@
 ﻿using Project.BuisnessLogic.Manage;
+using Project.Core.Stuff;
 using Project.SQLDataAccess.Entities;
 using System;
 using System.Collections.Generic;
@@ -15,8 +16,16 @@ namespace Project.Areas.User.Controllers
 
         public UserHomeController() { }
 
-        public UserHomeController(IManager<Objective, Guid> repo)
+        public UserHomeController(IManager<Objective,Guid> repo)
         {
+            List<SelectListItem> dropdownItems = new List<SelectListItem>();
+            dropdownItems.AddRange(new[]{
+                            new SelectListItem() { Text = "To do", Value = "1" },
+                            new SelectListItem() { Text = "Done", Value = "2" },
+                            new SelectListItem() { Text = "Review", Value = "3" },
+                            new SelectListItem() { Text  = "In progress", Value = "4" },
+                            new SelectListItem() { Text  = "Rework", Value = "5" } });
+            ViewBag.Statuses = dropdownItems;
             _repo = repo;
         }
         // GET: User/UserHome
@@ -28,19 +37,12 @@ namespace Project.Areas.User.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-            List<SelectListItem> dropdownItems = new List<SelectListItem>();
-            dropdownItems.AddRange(new[]{
-                            new SelectListItem() { Text = "To do", Value = "1" },
-                            new SelectListItem() { Text = "Done", Value = "2" },
-                            new SelectListItem() { Text = "Review", Value = "3" },
-                            new SelectListItem(){Text="In progress", Value="4" },
-                            new SelectListItem(){Text="Rework",Value="5" } });
-            ViewBag.Statuses = dropdownItems;
             return View();
         }
         [HttpPost]
         public ActionResult Create(Objective model)
         {
+            model.UserID = (Guid)System.Web.HttpContext.Current.Session["UserID"];
             _repo.Create(model);
             return RedirectToAction("Index");
         }
@@ -57,9 +59,9 @@ namespace Project.Areas.User.Controllers
             return RedirectToAction("Index");
         }
         [HttpGet]
-        public ActionResult Delete(Objective model)
+        public ActionResult Delete(Guid id,object o)
         {
-            return View(_repo.Get(model.Id));
+            return View(_repo.Get(id));
         }
         [HttpPost]
         public ActionResult Delete(Guid id)
@@ -67,5 +69,11 @@ namespace Project.Areas.User.Controllers
             _repo.Delete(id);
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public ActionResult Details(Guid id, object o)
+        {
+            return View(_repo.Get(id));
+        }
+        
     }
 }

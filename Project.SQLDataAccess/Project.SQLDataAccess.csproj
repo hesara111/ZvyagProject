@@ -56,9 +56,9 @@
     <Compile Include="Mapping\PermissionMap.cs" />
     <Compile Include="Mapping\StatusMap.cs" />
     <Compile Include="Mapping\AccountMap.cs" />
-    <Compile Include="Migrations\201906191448518_first.cs" />
-    <Compile Include="Migrations\201906191448518_first.Designer.cs">
-      <DependentUpon>201906191448518_first.cs</DependentUpon>
+    <Compile Include="Migrations\201906221723258_first.cs" />
+    <Compile Include="Migrations\201906221723258_first.Designer.cs">
+      <DependentUpon>201906221723258_first.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProjectDbContext.cs" />
@@ -80,8 +80,8 @@
     <Folder Include="Stuff\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201906191448518_first.resx">
-      <DependentUpon>201906191448518_first.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201906221723258_first.resx">
+      <DependentUpon>201906221723258_first.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

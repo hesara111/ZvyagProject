@@ -43,7 +43,8 @@ namespace Project.Controllers
                 {
                     FormsAuthentication.SignOut();
                     FormsAuthentication.SetAuthCookie(account.Login, true);
-                    Session["UserID"] = account.Name;
+                    Session["UserID"] = account.Id;
+                    Session["UserName"] = account.Name;
                     SetRefreshTokenCookie(loginVm);
                     if (account.PermissionID == 1)
                         return RedirectToAction("Index", "User/UserHome");

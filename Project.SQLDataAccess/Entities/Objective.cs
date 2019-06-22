@@ -16,7 +16,7 @@ namespace Project.SQLDataAccess.Entities
 
         public string Description { get; set; }
 
-        //public Status Status { get; set; }
+        public string StatusName { get; set; }
 
         public int StatusID { get; set; }
 
