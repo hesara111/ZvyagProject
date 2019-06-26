@@ -1,40 +1,105 @@
 ﻿@model IEnumerable<Project.SQLDataAccess.Entities.Account>
 
+
 @{
+    /**/
+
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+@Scripts.Render("~/scripts/jquery.validate.min.js")
+@Scripts.Render("~/bundles/bootstrap")
+@Scripts.Render("~/scripts/popper.min.js")
+<style>
+    a.my-class {
+        color: #000000
+        }
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
+        a.my-class:active {
+            color: #000000
+        }
+
+        a.my-class:link {
+            color: #999999
+        }
+
+        a.my-class:visited {
+            color: #CCCCCC
+        }
+    </style>
+<head>
+
+<script src="~/App_Start/lib/MDB-Free_4.8.1/js/jquery-3.4.0.min.js"></script>
+
+<script src="~/App_Start/lib/MDB-Free_4.8.1/js/popper.min.js"></script>
+
+<script src="~/App_Start/lib/MDB-Free_4.8.1/js/bootstrap.min.js"></script>
+
+<script src="~/App_Start/lib/MDB-Free_4.8.1/js/mdb.min.js"></script>
+
+<script src="~/App_Start/lib/MDB-Free_4.8.1/js/jquery-3.4.0.min.js"></script>
+
+<script src="~/App_Start/lib/MDB-Free_4.8.1/js/popper.min.js"></script>
+
+<script src="~/App_Start/lib/MDB-Free_4.8.1/js/bootstrap.min.js"></script>
+
+<script src="~/App_Start/lib/MDB-Free_4.8.1/js/mdb.min.js"></script>
+
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+
+<script>
+    function tableSearch() {
+        var phrase = document.getElementById('search-text');
+        var table = document.getElementById('mytable');
+        var regPhrase = new RegExp(phrase.value, 'i');
+        var flag = false;
+        for (var i = 1; i < table.rows.length; i++) {
+            flag = false;
+            for (var j = table.rows[i].cells.length - 1; j >= 0; j--) {
+                flag = regPhrase.test(table.rows[i].cells[j].innerHTML);
+                if (flag) break;
+            }
+            if (flag) {
+                table.rows[i].style.display = "";
+            } else {
+                table.rows[i].style.display = "none";
+            }
+
+        }
+    }
+</script>
+
+    </head>
+
+<h2>Список пользователей</h2>
+
+<p><label>Поиск по имени:<input class="form-control" type="text" onkeyup="tableSearch()" placeholder="Введите запрос" id="search-text"></label></p>
+<table id="mytable" class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayName("Имя пользователя")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Email)
+            @Html.DisplayName("Электронная почта")
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.Id })|
-            @Html.ActionLink("Watch", "Watch", new { id = item.Id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                <button type="button" id="id=" WhiteColor"" class="btn btn-primary "> @Html.ActionLink("Редактировать", "Edit", new { id = item.Id }, new { @class = "my-class" }) </button>
+                <button type="button" id="id=" WhiteColor"" class="btn btn-primary "> @Html.ActionLink("Посмотреть таски", "Watch", new { id = item.Id }, new { @class = "my-class" }) </button>
+                <button type="button" id="WhiteColor" class="btn btn-danger">@Html.ActionLink("Удалить", "Delete", new { id = item.Id }, new { @class = "my-class" }) </button>
+            </td>
+        </tr>
+    }
 
 </table>

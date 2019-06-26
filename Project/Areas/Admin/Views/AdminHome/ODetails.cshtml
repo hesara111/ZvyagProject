@@ -3,15 +3,31 @@
 @{
     ViewBag.Title = "ODetails";
 }
+<style>
+    a.my-class {
+        color: #000000
+    }
 
-<h2>ODetails</h2>
+        a.my-class:active {
+            color: #000000
+        }
+
+        a.my-class:link {
+            color: #999999
+        }
+
+        a.my-class:visited {
+            color: #CCCCCC
+        }
+</style>
+
+<h2>Подробности</h2>
 
 <div>
-    <h4>Objective</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayName("Название")
         </dt>
 
         <dd>
@@ -19,7 +35,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Description)
+            @Html.DisplayName("Описание")
         </dt>
 
         <dd>
@@ -27,7 +43,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.StatusID)
+            @Html.DisplayName("Статус")
         </dt>
 
         <dd>
@@ -36,7 +52,3 @@
 
     </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

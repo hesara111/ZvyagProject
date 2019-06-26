@@ -31,6 +31,11 @@ namespace Project.BuisnessLogic.Manage
             return _repo.IsExistedByName(login);
         }
 
+        public void EmailConfirm(Guid id)
+        {
+            _repo.EmailConfirm(id);
+        }
+
         
     }
 }

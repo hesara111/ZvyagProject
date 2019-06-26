@@ -18,6 +18,8 @@ namespace Project.SQLDataAccess.Entities
 
         public string StatusName { get; set; }
 
+       // public Account User { get; set; }
+
         public int StatusID { get; set; }
 
         public Guid UserID { get; set; }

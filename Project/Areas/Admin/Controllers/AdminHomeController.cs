@@ -96,9 +96,9 @@ namespace Project.Areas.Admin.Controllers
             return View(_rep.Get(id));
         }
         [HttpPost]
-        public ActionResult OEdit(Guid id, object o)
+        public ActionResult OEdit(Objective model,Guid id)
         {
-            _rep.Delete(id);
+            _rep.Edit(model,id);
             return RedirectToAction("Index");
         }
 

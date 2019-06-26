@@ -12,5 +12,7 @@ namespace Project.BuisnessLogic.Manage
         LEntity GetAccount(LoginVm loginVm);
 
         bool IsExistedByName(string login);
+
+        void EmailConfirm(Guid id);
     }
 }

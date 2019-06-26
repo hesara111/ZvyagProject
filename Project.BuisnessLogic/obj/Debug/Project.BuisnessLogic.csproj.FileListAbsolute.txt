@@ -9,3 +9,5 @@ C:\Users\diman\source\repos\Project\Project.BuisnessLogic\obj\Debug\Project.Buis
 C:\Users\diman\source\repos\Project\Project.BuisnessLogic\obj\Debug\Project.BuisnessLogic.csproj.CopyComplete
 C:\Users\diman\source\repos\Project\Project.BuisnessLogic\obj\Debug\Project.BuisnessLogic.dll
 C:\Users\diman\source\repos\Project\Project.BuisnessLogic\obj\Debug\Project.BuisnessLogic.pdb
+C:\Users\diman\source\repos\Project\Project.BuisnessLogic\bin\Debug\Project.BuisnessLogic.dll.config
+C:\Users\diman\source\repos\Project\Project.BuisnessLogic\bin\Debug\Project.Core.dll.config

@@ -3,19 +3,34 @@
 @{
     ViewBag.Title = "Create";
 }
+<style>
+    a.my-class {
+        color: #000000
+    }
 
-<h2>Create</h2>
+        a.my-class:active {
+            color: #000000
+        }
+
+        a.my-class:link {
+            color: #999999
+        }
+
+        a.my-class:visited {
+            color: #CCCCCC
+        }
+</style>
+<h2>Создание таска</h2>
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Objective</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("Название", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
@@ -23,7 +38,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("Описание", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
@@ -31,7 +46,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.StatusID, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("Статус", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownListFor(model => model.StatusID, ViewBag.Statuses as List<SelectListItem>)
                 @Html.ValidationMessageFor(model => model.StatusID, "", new { @class = "text-danger" })
@@ -40,12 +55,10 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Create" class="btn btn-success" />
+                <button type="button" id="id=" WhiteColor"" class="btn btn-primary "> @Html.ActionLink("Вернуться к списку", "Index", null, new { @class = "my-class" }) </button>
             </div>
         </div>
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>

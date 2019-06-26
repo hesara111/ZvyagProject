@@ -9,9 +9,9 @@ namespace Project.BuisnessLogic.Manage
     public interface IManager<TEntity, TId> where TEntity : class
     {
         List<TEntity> GetAll();
-        TEntity Get(TId id);
+        TEntity Get(Guid id);
         void Create(TEntity model);
-        void Edit(TEntity model, TId id);
-        void Delete(TId id);
+        void Edit(TEntity model, Guid id);
+        void Delete(Guid id);
     }
 }

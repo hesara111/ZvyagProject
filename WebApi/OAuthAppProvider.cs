@@ -30,7 +30,11 @@ namespace WebApi
 
             var identity = new ClaimsIdentity(context.Options.AuthenticationType);
             identity.AddClaim(new Claim(ClaimTypes.Name, context.UserName));
-            identity.AddClaim(new Claim(ClaimTypes.Role, "User"));
+            if(User.PermissionID==1)
+                identity.AddClaim(new Claim(ClaimTypes.Role, "User"));
+            else
+                identity.AddClaim(new Claim(ClaimTypes.Role, "Admin"));
+
 
             context.Validated(identity);
         }

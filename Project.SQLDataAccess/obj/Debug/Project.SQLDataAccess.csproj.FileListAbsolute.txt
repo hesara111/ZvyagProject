@@ -16,3 +16,4 @@ C:\Users\diman\source\repos\Project\Project.SQLDataAccess\bin\Debug\Project.Core
 C:\Users\diman\source\repos\Project\Project.SQLDataAccess\bin\Debug\Newtonsoft.Json.xml
 C:\Users\diman\source\repos\Project\Project.SQLDataAccess\obj\Debug\Project.SQLDataAccess.Migrations.first.resources
 C:\Users\diman\source\repos\Project\Project.SQLDataAccess\obj\Debug\Project.SQLDataAccess.csproj.GenerateResource.cache
+C:\Users\diman\source\repos\Project\Project.SQLDataAccess\bin\Debug\Project.Core.dll.config

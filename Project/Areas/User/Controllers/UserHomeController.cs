@@ -18,6 +18,7 @@ namespace Project.Areas.User.Controllers
 
         public UserHomeController(IManager<Objective,Guid> repo)
         {
+            
             List<SelectListItem> dropdownItems = new List<SelectListItem>();
             dropdownItems.AddRange(new[]{
                             new SelectListItem() { Text = "To do", Value = "1" },
@@ -31,7 +32,7 @@ namespace Project.Areas.User.Controllers
         // GET: User/UserHome
         public ActionResult Index()
         {
-            var res = _repo.GetAll();
+            var res = _repo.GetAll().Where(x => x.UserID == (Guid)System.Web.HttpContext.Current.Session["UserID"]);
             return View(res);
         }
         [HttpGet]
@@ -69,11 +70,5 @@ namespace Project.Areas.User.Controllers
             _repo.Delete(id);
             return RedirectToAction("Index");
         }
-        [HttpGet]
-        public ActionResult Details(Guid id, object o)
-        {
-            return View(_repo.Get(id));
-        }
-        
     }
 }

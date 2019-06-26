@@ -3,19 +3,34 @@
 @{
     ViewBag.Title = "Watch";
 }
+<style>
+    a.my-class {
+        color: #000000
+    }
 
-<h2>Watch</h2>
+        a.my-class:active {
+            color: #000000
+        }
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+        a.my-class:link {
+            color: #999999
+        }
+
+        a.my-class:visited {
+            color: #CCCCCC
+        }
+</style>
+
+<h2>Список тасков пользователя.</h2>
+
+
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayName("Название")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Description)
+            @Html.DisplayName("Описание")
         </th>
         
         <th></th>
@@ -30,9 +45,9 @@
             @Html.DisplayFor(modelItem => item.Description)
         </td>
         <td>
-            @Html.ActionLink("Edit", "OEdit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "ODetails", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "ODelete", new { id=item.Id })
+            <button type="button" id="id=" WhiteColor"" class="btn btn-primary "> @Html.ActionLink("Редактировать", "OEdit", new { id = item.Id }, new { @class = "my-class" }) </button>
+            <button type="button" id="id=" WhiteColor"" class="btn btn-primary "> @Html.ActionLink("Подробности", "ODetails", new { id = item.Id }, new { @class = "my-class" }) </button>
+            <button type="button" id="WhiteColor" class="btn btn-danger">@Html.ActionLink("Удалить", "ODelete", new { id = item.Id }, new { @class = "my-class" }) </button>
         </td>
     </tr>
 }

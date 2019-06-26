@@ -37,5 +37,15 @@ namespace Project.SQLDataAccess.Repositories
             
         }
 
+        public void EmailConfirm(Guid id)
+        {
+            var mode = _context.Users.Find(id);
+            var model = mode;
+            model.IsVerified = true;
+            _context.Entry(mode).CurrentValues.SetValues(model);
+            _context.SaveChanges();
+        }
+
+
     }
 }

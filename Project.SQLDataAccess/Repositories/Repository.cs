@@ -29,14 +29,14 @@ namespace Project.SQLDataAccess.Repositories
         public void Create(TEntity model)
         {
             _dbSet.Add(model);
-            context.SaveChanges();
+          //  context.SaveChanges();
         }
 
         public void Delete(TID id)
         {
             var model = _dbSet.Find(id);
             _dbSet.Remove(model);
-            context.SaveChanges();
+            //context.SaveChanges();
         }
 
         public void Edit(TEntity model, TID id)
@@ -47,24 +47,19 @@ namespace Project.SQLDataAccess.Repositories
                 return;
             }
             context.Entry(mode).CurrentValues.SetValues(model);
-            context.SaveChanges();
+           // context.SaveChanges();
         }
-
-        public void Edit(TEntity model)
-        {
-            throw new NotImplementedException();
-        }
+        
 
         public TEntity Get(TID id)
         {
+            
             return _dbSet.Find(id);
         }
 
         public List<TEntity> GetAll()
         {
             return _dbSet.AsNoTracking().ToList();
-        }
-
-        
+        }   
     }
 }

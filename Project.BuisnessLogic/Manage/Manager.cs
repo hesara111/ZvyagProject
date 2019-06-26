@@ -9,40 +9,44 @@ namespace Project.BuisnessLogic.Manage
 {
     public class Manager<TEntity, TId> : IManager<TEntity, TId> where TEntity : class
     {
-        private readonly IRepository<TEntity, TId> _repo;
+        private readonly IUnitOfWork<TEntity> utf;
+
         public Manager()
         {
 
         }
-        public Manager(IRepository<TEntity, TId> repo)
+        public Manager(IUnitOfWork<TEntity> repo)
         {
-            _repo = repo;
+            utf = repo;
         }
 
 
         public void Create(TEntity model)
         {
-            _repo.Create(model);
+            utf.entity.Create(model);
+            utf.Save();
         }
 
-        public void Delete(TId id)
+        public void Delete(Guid id)
         {
-            _repo.Delete(id);
+            utf.entity.Delete(id);
+            utf.Save();
         }
 
-        public void Edit(TEntity model, TId id)
+        public void Edit(TEntity model, Guid id)
         {
-            _repo.Edit(model, id);
+            utf.entity.Edit(model, id);
+            utf.Save();
         }
 
-        public TEntity Get(TId id)
+        public TEntity Get(Guid id)
         {
-            return _repo.Get(id);
+            return utf.entity.Get(id);
         }
 
         public List<TEntity> GetAll()
         {
-            return _repo.GetAll();
+            return utf.entity.GetAll();
         }
     }
 }

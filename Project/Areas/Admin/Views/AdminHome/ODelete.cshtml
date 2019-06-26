@@ -3,16 +3,30 @@
 @{
     ViewBag.Title = "ODelete";
 }
+<style>
+    a.my-class {
+        color: #000000
+    }
 
-<h2>ODelete</h2>
+        a.my-class:active {
+            color: #000000
+        }
 
-<h3>Are you sure you want to delete this?</h3>
+        a.my-class:link {
+            color: #999999
+        }
+
+        a.my-class:visited {
+            color: #CCCCCC
+        }
+</style>
+
+<h2>Are you sure you want to delete this task?</h2>
 <div>
-    <h4>Objective</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayName("Название")
         </dt>
 
         <dd>
@@ -20,7 +34,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Description)
+            @Html.DisplayName("Подпись")
         </dt>
 
         <dd>
@@ -28,7 +42,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.StatusID)
+            @Html.DisplayName("Статус")
         </dt>
 
         <dd>
@@ -41,8 +55,7 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Удалить" class="btn btn-danger" /> 
         </div>
     }
 </div>

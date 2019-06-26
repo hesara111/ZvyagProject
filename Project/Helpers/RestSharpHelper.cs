@@ -11,9 +11,9 @@ using static Project.Helpers.RestServiceNamesClass;
 namespace Project.Helpers
 {
     public class RestSharpHelper
-    {
+    {   //59628
         //   private string WebApiUrl = ConfigurationManager.AppSettings["WebApiUrl"];
-        private string Url = "http://localhost:59628/";
+        private string Url = "http://localhost:228/";
 
         public IRestResponse Execute(
             RestServiceNames methodName,

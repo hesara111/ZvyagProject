@@ -11,5 +11,7 @@ namespace Project.Core.Stuff
         LEntity GetAccount(LoginVm loginVm);
 
         bool IsExistedByName(string login);
+
+        void EmailConfirm(Guid id);
     }
 }

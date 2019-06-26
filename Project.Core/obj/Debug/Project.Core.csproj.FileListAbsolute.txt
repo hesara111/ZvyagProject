@@ -7,3 +7,12 @@ C:\Users\diman\source\repos\Project\Project.Core\obj\Debug\Project.Core.csproj.C
 C:\Users\diman\source\repos\Project\Project.Core\obj\Debug\Project.Core.csproj.CopyComplete
 C:\Users\diman\source\repos\Project\Project.Core\obj\Debug\Project.Core.dll
 C:\Users\diman\source\repos\Project\Project.Core\obj\Debug\Project.Core.pdb
+C:\Users\diman\source\repos\Project\Project.Core\bin\Debug\Project.Core.dll.config
+C:\Users\diman\source\repos\Project\Project.Core\bin\Debug\SendGrid.dll
+C:\Users\diman\source\repos\Project\Project.Core\bin\Debug\System.Net.Http.dll
+C:\Users\diman\source\repos\Project\Project.Core\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Users\diman\source\repos\Project\Project.Core\bin\Debug\System.Security.Cryptography.Encoding.dll
+C:\Users\diman\source\repos\Project\Project.Core\bin\Debug\System.Security.Cryptography.Primitives.dll
+C:\Users\diman\source\repos\Project\Project.Core\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\Users\diman\source\repos\Project\Project.Core\bin\Debug\SendGrid.pdb
+C:\Users\diman\source\repos\Project\Project.Core\bin\Debug\SendGrid.xml

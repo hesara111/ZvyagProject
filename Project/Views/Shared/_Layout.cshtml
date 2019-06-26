@@ -18,18 +18,17 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Имя приложения", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("A-Level project", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Мои таски", "Index", "UserHome", new { area = "User" }, new { @class = "nav navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Admin", "Index", "Admin/AdminHome")</li>
-                    <li>@Html.ActionLink("User", "Index", "User/UserHome")</li>
-                    <li>@Html.ActionLink("Public", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Register", "Index", "Register")</li>
+                <ul class="nav navbar-nav pull-right">
+                    <ul class="nav navbar-nav ">
+                        <li>@Html.ActionLink("Register", "Index", "Register")</li>
+                        <li>@Html.LoginLink("Sign in", "Dear friend {0}, sign out", "SignIn", "SignOut", "Login")</li>
+                    </ul>
                 </ul>
-                <ul class="nav navbar-nav">
-                    <li>@Html.LoginLink("Sign in", "Dear friend {0}, sign out", "SignIn", "SignOut", "Login")</li>
-                </ul>
+
             </div>
         </div>
     </div>
@@ -37,7 +36,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - мое приложение ASP.NET</p>
+            <p>&copy; @DateTime.Now.Year - My application for A-Level :)</p>
         </footer>
     </div>
 

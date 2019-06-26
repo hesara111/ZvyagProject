@@ -118,3 +118,17 @@ C:\Users\diman\source\repos\Project\Project\bin\Owin.dll
 C:\Users\diman\source\repos\Project\Project\bin\Microsoft.Owin.xml
 C:\Users\diman\source\repos\Project\Project\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\diman\source\repos\Project\Project\bin\Microsoft.Owin.Security.xml
+C:\Users\diman\source\repos\Project\Project\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\diman\source\repos\Project\Project\bin\Microsoft.SharePoint.Client.dll
+C:\Users\diman\source\repos\Project\Project\bin\Microsoft.SharePoint.Client.Runtime.dll
+C:\Users\diman\source\repos\Project\Project\bin\SendGrid.dll
+C:\Users\diman\source\repos\Project\Project\bin\System.Net.Http.dll
+C:\Users\diman\source\repos\Project\Project\bin\System.Security.Cryptography.Algorithms.dll
+C:\Users\diman\source\repos\Project\Project\bin\System.Security.Cryptography.Encoding.dll
+C:\Users\diman\source\repos\Project\Project\bin\System.Security.Cryptography.Primitives.dll
+C:\Users\diman\source\repos\Project\Project\bin\System.Security.Cryptography.X509Certificates.dll
+C:\Users\diman\source\repos\Project\Project\bin\Project.BuisnessLogic.dll.config
+C:\Users\diman\source\repos\Project\Project\bin\Project.Core.dll.config
+C:\Users\diman\source\repos\Project\Project\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\diman\source\repos\Project\Project\bin\SendGrid.pdb
+C:\Users\diman\source\repos\Project\Project\bin\SendGrid.xml
